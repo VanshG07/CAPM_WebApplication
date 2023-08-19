@@ -17,6 +17,20 @@ hide_st_style = """
             header {visibility: hidden;}
             </style>
             """
+footer {
+	
+	visibility: hidden;
+	
+	}
+footer:after {
+	content:'goodbye'; 
+	visibility: visible;
+	display: block;
+	position: relative;
+	#background-color: red;
+	padding: 5px;
+	top: 2px;
+}
 st.markdown(hide_st_style, unsafe_allow_html=True)
 col1,col2 =st.columns([1,1]) #[1,1] is width ratio u can also take [10,3],etc
 with col1:
