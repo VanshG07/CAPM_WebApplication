@@ -14,22 +14,10 @@ hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
-            header {visibility: hidden;}
             </style>
             """
-footer= """
 
-	<style> your css code put here</style>
 
-	<div class='footer'>
-
-	<p>the word you want to tell<a style='display:block;text-align:center;' 
-
-	href='https://www.streamlit.io' target='_blank'>your email address put here</a></p>
-
-	</div>"""
-
-st.markdown(footer, unsafe_allow_html=True)
 st.markdown(hide_st_style, unsafe_allow_html=True)
 col1,col2 =st.columns([1,1]) #[1,1] is width ratio u can also take [10,3],etc
 with col1:
