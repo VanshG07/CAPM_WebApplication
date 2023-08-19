@@ -10,7 +10,14 @@ st.set_page_config(page_title="CAPM",
                    layout='wide') #In config there are 3 things :1)page_title 2)page_icon 3)layout if we skip layout=wide then the title wll come in center but we want it in our whole page therefore use layout
 
 st.title("Capital Asset Pricing Model")
-
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 col1,col2 =st.columns([1,1]) #[1,1] is width ratio u can also take [10,3],etc
 with col1:
     stocks_list = st.multiselect("choose 4 stocks",('TSLA','AAPL','NFLX','MSFT','MGM','AMZN','NVDA','GOOGL'),['TSLA','AAPL','AMZN','GOOGL'])
